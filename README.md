@@ -1,6 +1,7 @@
 # AWS RoboMaker
 
-It describes IoT RoboMaker of AWS.
+AWS RoboMaker is a cloud-based simulation  service that enables robotics developers to  run, scale, and automate simulation without  managing any infrastructure![image](https://user-images.githubusercontent.com/52392004/209238614-3d4ee2a1-fa09-4031-927a-505004f1525d.png)
+
 
 Supporting Region (2022.12): Europe (Ireland), Asia Pacific (Singapore), Europe (Frankfurt), Asia Pacific (Tokyo), US East (N. Virginia), US East (Ohio), US West (Oregon)
 
