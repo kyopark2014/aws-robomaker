@@ -20,3 +20,7 @@ Supporting Region (2022.12): Europe (Ireland), Asia Pacific (Singapore), Europe 
 ## Articles
 
 [Deploy and Manage ROS Robots with AWS IoT Greengrass 2.0 and Docker](https://aws.amazon.com/ko/blogs/robotics/deploy-and-manage-ros-robots-with-aws-iot-greengrass-2-0-and-docker/)
+
+## Reference
+
+[AWS Robotics Blog](https://aws.amazon.com/ko/blogs/robotics/)
