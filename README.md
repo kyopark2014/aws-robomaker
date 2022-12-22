@@ -1,4 +1,5 @@
-# iot-robomaker
+# AWS RoboMaker
+
 It describes IoT RoboMaker of AWS.
 
 Supporting Region (2022.12): Europe (Ireland), Asia Pacific (Singapore), Europe (Frankfurt), Asia Pacific (Tokyo), US East (N. Virginia), US East (Ohio), US West (Oregon)
