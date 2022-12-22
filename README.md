@@ -24,3 +24,5 @@ Supporting Region (2022.12): Europe (Ireland), Asia Pacific (Singapore), Europe 
 ## Reference
 
 [AWS Robotics Blog](https://aws.amazon.com/ko/blogs/robotics/)
+
+[AWS RoboMaker](https://aws.amazon.com/ko/robomaker/)
