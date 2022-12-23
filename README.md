@@ -11,8 +11,10 @@ Supporting Region (2022.12): Europe (Ireland), Asia Pacific (Singapore), Europe 
 
 ### ROS
 
-A set of software libraries and tools, from drivers to algorithms, 
-that help developers build robot applications
+A set of software libraries and tools, from drivers to algorithms, that help developers build robot applications
+
+ROS is an open-source framework that provides inter-process communication mechanisms, standard message types, robotic control and observation tools, hardware abstractions, and common algorithms for robot software development.
+
 
 
 ### Gazebo
