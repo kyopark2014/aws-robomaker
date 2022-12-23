@@ -3,7 +3,6 @@
 
 AWS의 로보메이커(RoboMaker)는 클라우드 기반의 로봇 시뮬레이션 서비스입니다. 로봇 개발자들이 다수의 로봇을 실행하고 자동화 할 수 있습니다. 
 
-![image](https://user-images.githubusercontent.com/52392004/209238614-3d4ee2a1-fa09-4031-927a-505004f1525d.png)
 
 
 Supporting Region (2022.12): Europe (Ireland), Asia Pacific (Singapore), Europe (Frankfurt), Asia Pacific (Tokyo), US East (N. Virginia), US East (Ohio), US West (Oregon)
