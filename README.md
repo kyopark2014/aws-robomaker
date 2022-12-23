@@ -7,6 +7,16 @@ AWS의 로보메이커(RoboMaker)는 클라우드 기반의 로봇 시뮬레이�
 
 Supporting Region (2022.12): Europe (Ireland), Asia Pacific (Singapore), Europe (Frankfurt), Asia Pacific (Tokyo), US East (N. Virginia), US East (Ohio), US West (Oregon)
 
+### ROS
+
+A set of software libraries and tools, from drivers to algorithms, 
+that help developers build robot applications
+
+
+### Gazebo
+Robust physics engine, high-quality graphics, and programmatic and graphical interfaces to help developers simulate robots
+
+
 ## Workshop 
 
 [Building Cloud Connected Robots](https://catalog.us-east-1.prod.workshops.aws/workshops/fa208b8e-83d6-4cc1-8356-bfa5b6184fae/en-US)
