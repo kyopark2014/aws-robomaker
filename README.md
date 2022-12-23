@@ -14,7 +14,7 @@ that help developers build robot applications
 
 
 ### Gazebo
-Robust physics engine, high-quality graphics, and programmatic and graphical interfaces to help developers simulate robots
+Robust physics engine, high-quality graphics, and programmatic and graphical interfaces to help developers simulate robots
 
 
 ## Workshop 
