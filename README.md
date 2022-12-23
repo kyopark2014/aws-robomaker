@@ -56,6 +56,8 @@ Rqt is an extensible dashboard framework that implements the various GUI tools a
 
 ## Reference
 
+[What Is AWS RoboMaker? - Developer Guide](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-welcome.html)
+
 [AWS Robotics Blog](https://aws.amazon.com/ko/blogs/robotics/)
 
 [AWS RoboMaker](https://aws.amazon.com/ko/robomaker/)
