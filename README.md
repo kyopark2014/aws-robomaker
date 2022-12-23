@@ -29,6 +29,12 @@ Colcon is a command line tool built by the OSRF(Open Source Robotics Foundation)
 
 Rvis is a 3D Visulizer for the ROS framework. It provides information on the robot state and world around it (virtual or real).
 
+
+### Rqt
+
+Rqt is an extensible dashboard framework that implements the various GUI tools and dashboards in the form of plugins for your robot applications.
+
+
 ## Workshop 
 
 [Building Cloud Connected Robots](https://catalog.us-east-1.prod.workshops.aws/workshops/fa208b8e-83d6-4cc1-8356-bfa5b6184fae/en-US)
