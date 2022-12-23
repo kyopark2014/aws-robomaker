@@ -42,3 +42,5 @@ Robust physics engine, high-quality graphics, and programmatic and graphical int
 [AWS RoboMaker](https://aws.amazon.com/ko/robomaker/)
 
 [AWS RoboMaker 기능](https://aws.amazon.com/ko/robomaker/features/)
+
+[Building autonomous robots for everyday tasks with AWS RoboMaker](https://www.youtube.com/watch?v=2UWNIyBaDxg)
