@@ -58,7 +58,7 @@ Cloud9을 이용할 경우에, [Cloud9에서 EBS 크기 변경](https://github.c
 
 ### Cloud Connected Robots
 
-[Cloud Connected Robots](https://github.com/kyopark2014/aws-robomaker/edit/main/cloud-connected-robots.md)에 대한 코드를 분석합니다. 
+[Cloud Connected Robots](https://github.com/kyopark2014/aws-robomaker/tree/main/cloud-connected-robots)에 대한 코드를 분석합니다. 
 
 
 ## Workshop 
