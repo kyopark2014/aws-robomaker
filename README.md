@@ -40,11 +40,9 @@ Rqt is an extensible dashboard framework that implements the various GUI tools a
 
 ## Working
 
-### Docker Environment
+### ROS Robot in Greengrass
 
-- Blog: [Deploy and Manage ROS Robots with AWS IoT Greengrass 2.0 and Docker](https://aws.amazon.com/ko/blogs/robotics/deploy-and-manage-ros-robots-with-aws-iot-greengrass-2-0-and-docker/)
-
-- Github: [ROS2 Docker Sample Application with AWS IoT Greengrass 2.0](https://github.com/aws-samples/greengrass-v2-docker-ros-demo)
+[Grrengrass with Dockor](https://github.com/kyopark2014/aws-robomaker/blob/main/greengrass-with-docker.md)에서는 Greengrass2.0에 Docker로 된 ROS Robot을 올리는것에 대해 설명합니다. 
 
 
 
