@@ -38,6 +38,10 @@ Rvis is a 3D Visulizer for the ROS framework. It provides information on the rob
 Rqt is an extensible dashboard framework that implements the various GUI tools and dashboards in the form of plugins for your robot applications.
 
 
+## Docker
+
+[ROS2 Docker Sample Application with AWS IoT Greengrass 2.0](https://github.com/aws-samples/greengrass-v2-docker-ros-demo)
+
 ## Workshop 
 
 [Building Cloud Connected Robots](https://catalog.us-east-1.prod.workshops.aws/workshops/fa208b8e-83d6-4cc1-8356-bfa5b6184fae/en-US)
