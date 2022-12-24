@@ -38,7 +38,7 @@ Rvis is a 3D Visulizer for the ROS framework. It provides information on the rob
 Rqt is an extensible dashboard framework that implements the various GUI tools and dashboards in the form of plugins for your robot applications.
 
 
-## Docker
+## Working
 
 ### Docker Environment
 
@@ -52,7 +52,7 @@ Rqt is an extensible dashboard framework that implements the various GUI tools a
 
 - Workshop: [Using AWS to Run Robotics Simulations](https://catalog.us-east-1.prod.workshops.aws/workshops/5b369b7a-2da1-498b-97a9-9af95e3c6294/en-US)
 
-- Github: [Robot fleet simulation using concurrent gazebo instances - Github](https://github.com/aws-samples/multi-robot-fleet-sample-application)
+- Github: [Robot fleet simulation using concurrent gazebo instances](https://github.com/aws-samples/multi-robot-fleet-sample-application)
 
 
 
