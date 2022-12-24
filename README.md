@@ -42,7 +42,7 @@ Rqt is an extensible dashboard framework that implements the various GUI tools a
 
 ### ROS Robot in Greengrass
 
-[Grrengrass with Dockor](https://github.com/kyopark2014/aws-robomaker/blob/main/greengrass-with-docker.md)에서는 Greengrass2.0에 Docker로 된 ROS Robot을 올리는것에 대해 설명합니다. 
+[Grrengrass with Dockor](https://github.com/kyopark2014/aws-robomaker/blob/main/greengrass-with-docker.md)에서는 Greengrass2.0에 Docker로 된 ROS Robot을 올리는것에 대한 코드를 분석합니다. 
 
 
 
