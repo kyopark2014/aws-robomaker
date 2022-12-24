@@ -2,6 +2,18 @@
 
 [Blog - Deploy and Manage ROS Robots with AWS IoT Greengrass 2.0 and Docker](https://aws.amazon.com/ko/blogs/robotics/deploy-and-manage-ros-robots-with-aws-iot-greengrass-2-0-and-docker/)을 참조하여 예제를 분석합니다.
 
+아래와 같이 코드 다운로드후에 [greengrass_bootstrap.template.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/greengrass/greengrass_bootstrap.template.yaml)에 이용해 cloudFormation로 인프라 생성합니다. 
+
+```java
+git clone https://github.com/aws-samples/greengrass-v2-docker-ros-demo.git ~/greengrass-v2-docker-ros-demo
+cd ~/greengrass-v2-docker-ros-demo
+aws cloudformation create-stack --stack-name GG-Provisioning --template-body file://greengrass/greengrass_bootstrap.template.yaml --capabilities CAPABILITY_NAMED_IAM
+```
+
+### greengrass_bootstrap.template.yaml
+
+[greengrass_bootstrap.template.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/greengrass/greengrass_bootstrap.template.yaml)
+
 ### Dockerfile
 
 아래는 [Dockerfile](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/Dockerfile)입니다. 
@@ -85,6 +97,152 @@ source "/opt/greengrass_bridge/setup.bash"
 source "/opt/ros_demos/setup.bash"
 exec "$@"
 ```
+
+### greengrass_bootstrap.template.yaml
+
+[greengrass_bootstrap.template.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/greengrass/greengrass_bootstrap.template.yaml)에서는 아래와 같이 ECR, IAM Role을 설정합니다. 
+
+```java
+AWSTemplateFormatVersion: '2010-09-09'
+Metadata:
+  License: Apache-2.0
+Description: 'Sample cloudformation template that creates default Greengrass provisioning resources.'
+Resources:
+  GreengrassProvisioningUser:
+    Type: AWS::IAM::User
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      VersioningConfiguration:
+        Status: Enabled
+  GreengrassProvisioningUserGroup:
+    Type: AWS::IAM::Group
+  Users:
+    Type: AWS::IAM::UserToGroupAddition
+    Properties:
+      GroupName: !Ref 'GreengrassProvisioningUserGroup'
+      Users: [!Ref 'GreengrassProvisioningUser']
+  GreengrassTokenExchangeRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: "GreengrassV2TokenExchangeRole"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - credentials.iot.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+  RobotPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: RobotPolicy
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Action: [ "s3:ListBucket" ]
+            Resource: !Join ["",[ "arn:aws:s3:::", !Ref S3Bucket ] ]
+          - Effect: Allow
+            Action: [ 
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject"
+                    ]
+            Resource: !Join ["",["arn:aws:s3:::", !Ref S3Bucket,"/*"] ]
+          - Effect: Allow
+            Action: [ 
+                  "ecr:GetAuthorizationToken",
+                  "ecr:BatchGetImage",
+                  "ecr:GetDownloadUrlForLayer"
+                    ]
+            Resource: '*'
+          - Effect: Allow
+            Action: [ "greengrass:" ]
+            Resource: '*'
+          - Effect: Allow
+            Action: [ "iot:" ]
+            Resource: '*'
+      Roles:  [ !Ref 'GreengrassTokenExchangeRole' ]
+  GreengrassTokenPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: GreengrassTokenExchangePolicy
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Action: [ 
+                    "iot:DescribeCertificate",
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents",
+                    "logs:DescribeLogStreams",
+                    "iot:Connect",
+                    "iot:Publish",
+                    "iot:Subscribe",
+                    "iot:Receive",
+                    "s3:GetBucketLocation"
+                    ]
+            Resource: '*'
+      Roles:  [ !Ref 'GreengrassTokenExchangeRole' ]
+  GreengrassProvisioningUserPolicies:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: GreengrassProvisioningUsers
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Action: [ 
+                      "iot:AddThingToThingGroup",
+                      "iot:AttachPolicy",
+                      "iot:AttachThingPrincipal",
+                      "iot:CreateKeysAndCertificate",
+                      "iot:CreatePolicy",
+                      "iot:CreateRoleAlias",
+                      "iot:CreateThing",
+                      "iot:CreateThingGroup",
+                      "iot:DescribeEndpoint",
+                      "iot:DescribeRoleAlias",
+                      "iot:DescribeThingGroup",
+                      "iot:GetPolicy",
+                      "iam:GetRole",
+                      "iam:CreateRole",
+                      "iam:PassRole",
+                      "iam:CreatePolicy",
+                      "iam:AttachRolePolicy",
+                      "iam:GetPolicy",
+                      "sts:GetCallerIdentity"
+                    ]
+            Resource: '*'
+          - Effect: Allow
+            Action: [ 
+                      "greengrass:CreateDeployment",
+                      "iot:CancelJob",
+                      "iot:CreateJob",
+                      "iot:DeleteThingShadow",
+                      "iot:DescribeJob",
+                      "iot:DescribeThing",
+                      "iot:DescribeThingGroup",
+                      "iot:GetThingShadow",
+                      "iot:UpdateJob",
+                      "iot:UpdateThingShadow"
+                    ]
+            Resource: '*'
+      Groups: [!Ref 'GreengrassProvisioningUserGroup']
+    
+Outputs:
+  UserName:
+    Value: !Ref GreengrassProvisioningUser
+    Description: User name for the provisioning user.
+  S3BucketName:
+    Value: !Ref S3Bucket
+    Description: S3 bucket to upload assets to. 
+```    
 
 ## Reference
 
