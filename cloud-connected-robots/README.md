@@ -9,7 +9,7 @@ wget https://ee-assets-prod-us-east-1.s3.us-east-1.amazonaws.com/modules/4301048
 tar -xf workshop-assets.tar.gz
 ```
 
-## Console
+## Local에서 실행하기 
 
 아래와 같이 빌드를 합니다. 
 
@@ -67,7 +67,7 @@ source install/setup.sh
 ros2 launch jetbot_move dance.launch.py
 ```
 
-## Docker
+## Docker로 이미지 만들기 
 
 Greengrass 환경을 설정합니다. 
 
