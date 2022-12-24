@@ -120,6 +120,8 @@ aws greengrassv2 create-component-version \
 
 ### Dockerfile
 
+[Dockerfile](https://github.com/kyopark2014/aws-robomaker/blob/main/cloud-connected-robots/building-cloud-connected-robots-reinvent2021/Dockerfile)은 아래와 같습니다. 
+
 ```java
 # Distribution of ROS2
 ARG ROS_DISTRO=foxy
