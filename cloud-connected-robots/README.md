@@ -87,7 +87,7 @@ sudo pip3 install docker-compose=="${DOCKER_COMPOSE_VERSION}"
 pip install docker-compose
 ```
 
-CloudFront로 인프라를 설치합니다. 
+CloudFomation으로 인프라를 설치합니다. 
 
 ```java
 cd ~/environment/building-cloud-connected-robots-reinvent2021
