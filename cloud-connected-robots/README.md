@@ -67,7 +67,7 @@ source install/setup.sh
 ros2 launch jetbot_move dance.launch.py
 ```
 
-## Docker로 설치하기
+## Greengrass에서 Docker 컨테이너로 실행하기 
 
 Greengrass 환경을 설정합니다. 
 
