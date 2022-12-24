@@ -38,7 +38,9 @@ Rvis is a 3D Visulizer for the ROS framework. It provides information on the rob
 Rqt is an extensible dashboard framework that implements the various GUI tools and dashboards in the form of plugins for your robot applications.
 
 
-## Working
+## 중요 References
+
+Cloud9을 이용할 경우에, [Cloud9에서 EBS 크기 변경](https://github.com/kyopark2014/technical-summary/blob/main/resize.md)에 따라 cloud9의 볼륨을 조정합니다. 
 
 ### ROS Robot in Greengrass
 
