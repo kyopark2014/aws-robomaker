@@ -1,4 +1,4 @@
-# RoboMaker Sample: Hello World
+# RoboMaker: Hello World
 
 [AWS RoboMaker Sample Application - Hello World](https://github.com/aws-robotics/aws-robomaker-sample-application-helloworld)
 
