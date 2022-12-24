@@ -50,9 +50,18 @@ Rqt is an extensible dashboard framework that implements the various GUI tools a
 
 ### Robotics Simulations
 
+코드 다운로드 및 Docker Build를 아래와 같이 수행합니다. 
+
+```java
+git clone -b noetic-husky-mqtt-dev https://github.com/aws-samples/multi-robot-fleet-sample-application.git
+cd ~/environment/multi-robot-fleet-sample-application/simulation_ws/
+docker build -t robot_fleet:latest ./
+```
+
 - Workshop: [Using AWS to Run Robotics Simulations](https://catalog.us-east-1.prod.workshops.aws/workshops/5b369b7a-2da1-498b-97a9-9af95e3c6294/en-US)
 
 - Github: [Robot fleet simulation using concurrent gazebo instances](https://github.com/aws-samples/multi-robot-fleet-sample-application)
+
 
 
 
