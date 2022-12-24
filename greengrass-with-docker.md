@@ -157,9 +157,7 @@ services:
 
 ### greengrass_bootstrap.template.yaml
 
-[greengrass_bootstrap.template.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/greengrass/greengrass_bootstrap.template.yaml)은 아래와 같습니다.
-
-[greengrass_bootstrap.template.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/greengrass/greengrass_bootstrap.template.yaml)에서는 아래와 같이 ECR, IAM Role을 설정합니다. 
+[greengrass_bootstrap.template.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/greengrass/greengrass_bootstrap.template.yaml)은 아래와 같이 ECR, IAM Role을 설정합니다. 
 
 ```java
 AWSTemplateFormatVersion: '2010-09-09'
