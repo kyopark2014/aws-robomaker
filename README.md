@@ -92,6 +92,8 @@ Cloud9을 이용할 경우에, [Cloud9에서 EBS 크기 변경](https://github.c
 
 [AWS Robotics Blog](https://aws.amazon.com/ko/blogs/robotics/)
 
+[Run a Simulation in AWS RoboMaker](https://www.youtube.com/watch?v=CocGUfhp-I8)
+
 [AWS RoboMaker](https://aws.amazon.com/ko/robomaker/)
 
 [AWS Robotics - Github](https://github.com/aws-robotics)
