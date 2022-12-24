@@ -2,7 +2,7 @@
 
 [Blog - Deploy and Manage ROS Robots with AWS IoT Greengrass 2.0 and Docker](https://aws.amazon.com/ko/blogs/robotics/deploy-and-manage-ros-robots-with-aws-iot-greengrass-2-0-and-docker/)을 참조하여 예제를 분석합니다.
 
-아래와 같이 코드 다운로드후에 [greengrass_bootstrap.template.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/greengrass/greengrass_bootstrap.template.yaml)에 이용해 cloudFormation로 인프라 생성합니다. 
+아래와 같이 코드 다운로드후에 [greengrass_bootstrap.template.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/greengrass/greengrass_bootstrap.template.yaml)에 이용해 ECR 및 IAM Role을 cloudFormation로 생성합니다. 
 
 ```java
 git clone https://github.com/aws-samples/greengrass-v2-docker-ros-demo.git ~/greengrass-v2-docker-ros-demo
