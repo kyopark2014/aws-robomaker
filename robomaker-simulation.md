@@ -8,9 +8,35 @@ cd ~/environment/multi-robot-fleet-sample-application/simulation_ws/
 docker build -t robot_fleet:latest ./
 ```
 
+### robot-fleet-sim.json 
 
+```java
+[
+    {
+        "application": "",
+        "applicationVersion": "$LATEST",
+        "launchConfig": {
+            "command": ["roslaunch", "velocity_mqtt_manager", "velocity_mqtt_manager.launch"],
+            "streamUI": true
+        },
+        "tools": [
+            {
+                "streamUI": true,
+                "name": "terminal",
+                "command": "/usr/bin/xterm",
+                "streamOutputToCloudWatch": true,
+                "exitBehavior": "FAIL"
+            }
+        ],
+        "useDefaultTools": false,
+        "useDefaultUploadConfigurations": false
+    }
+]
+```
 
-이때의 Dockerfile은 아래와 같습니다. 
+### Dockerfile
+
+Dockerfile은 아래와 같습니다. 
 
 ```java
 FROM ros:noetic
@@ -46,6 +72,20 @@ COPY docker/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
+```
+
+### entrypoint.sh
+
+```java
+#!/bin/bash
+set -e
+
+# setup ros environment
+source /opt/ros/noetic/setup.bash
+source /multi-robot-fleet-sample-application/simulation_ws/devel/setup.bash
+export HUSKY_REALSENSE_ENABLED=true
+export HUSKY_LMS1XX_ENABLED=true
+exec "$@"
 ```
 
 
@@ -156,19 +196,7 @@ aws robomaker create-simulation-job  \
 --simulation-application file://$HOME/environment/multi-robot-fleet-sample-application/simulation_ws/robot-fleet-sim.json
 ```
 
-### entrypoint.sh
 
-```java
-#!/bin/bash
-set -e
-
-# setup ros environment
-source /opt/ros/noetic/setup.bash
-source /multi-robot-fleet-sample-application/simulation_ws/devel/setup.bash
-export HUSKY_REALSENSE_ENABLED=true
-export HUSKY_LMS1XX_ENABLED=true
-exec "$@"
-```
 
 
 ## Reference
