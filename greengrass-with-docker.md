@@ -72,6 +72,20 @@ RUN chmod +x /app_entrypoint.sh
 ENTRYPOINT ["/app_entrypoint.sh"]
 ```
 
+### app_entrypoint.sh
+
+[app_entrypoint.sh](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/edit/main/app_entrypoint.sh)은 아래와 같습니다. 
+
+```java
+#!/bin/bash
+set -e
+
+# setup ros2 environment
+source "/opt/greengrass_bridge/setup.bash"
+source "/opt/ros_demos/setup.bash"
+exec "$@"
+```
+
 ## Reference
 
 [Blog - Deploy and Manage ROS Robots with AWS IoT Greengrass 2.0 and Docker](https://aws.amazon.com/ko/blogs/robotics/deploy-and-manage-ros-robots-with-aws-iot-greengrass-2-0-and-docker/)
