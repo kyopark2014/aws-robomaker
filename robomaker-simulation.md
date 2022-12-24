@@ -156,7 +156,19 @@ aws robomaker create-simulation-job  \
 --simulation-application file://$HOME/environment/multi-robot-fleet-sample-application/simulation_ws/robot-fleet-sim.json
 ```
 
+### entrypoint.sh
 
+```java
+#!/bin/bash
+set -e
+
+# setup ros environment
+source /opt/ros/noetic/setup.bash
+source /multi-robot-fleet-sample-application/simulation_ws/devel/setup.bash
+export HUSKY_REALSENSE_ENABLED=true
+export HUSKY_LMS1XX_ENABLED=true
+exec "$@"
+```
 
 
 ## Reference
