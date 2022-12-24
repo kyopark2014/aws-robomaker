@@ -40,17 +40,26 @@ Rqt is an extensible dashboard framework that implements the various GUI tools a
 
 ## Docker
 
-### Reference for Docker Environment
+### Docker Environment
 
 - Blog: [Deploy and Manage ROS Robots with AWS IoT Greengrass 2.0 and Docker](https://aws.amazon.com/ko/blogs/robotics/deploy-and-manage-ros-robots-with-aws-iot-greengrass-2-0-and-docker/)
 
 - Github: [ROS2 Docker Sample Application with AWS IoT Greengrass 2.0](https://github.com/aws-samples/greengrass-v2-docker-ros-demo)
 
+
+
+### Robotics Simulations
+
+- Workshop: [Using AWS to Run Robotics Simulations](https://catalog.us-east-1.prod.workshops.aws/workshops/5b369b7a-2da1-498b-97a9-9af95e3c6294/en-US)
+
+- Github: [Robot fleet simulation using concurrent gazebo instances - Github](https://github.com/aws-samples/multi-robot-fleet-sample-application)
+
+
+
 ## Workshop 
 
 [Building Cloud Connected Robots](https://catalog.us-east-1.prod.workshops.aws/workshops/fa208b8e-83d6-4cc1-8356-bfa5b6184fae/en-US)
 
-[Using AWS to Run Robotics Simulations](https://catalog.us-east-1.prod.workshops.aws/workshops/5b369b7a-2da1-498b-97a9-9af95e3c6294/en-US)
 
 [NVIDIA Isaac Replicator and Isaac Sim on AWS RoboMaker Batch](https://catalog.us-east-1.prod.workshops.aws/workshops/bf038477-a314-403e-9272-508642bc0fcb/en-US)
 
@@ -58,11 +67,7 @@ Rqt is an extensible dashboard framework that implements the various GUI tools a
 
 [Running NVIDIA Isaac Sim on AWS RoboMaker](https://catalog.us-east-1.prod.workshops.aws/workshops/c8280014-6276-4a6c-830c-a0ce18581221/en-US)
 
-## Articles
 
-
-
-[Build and Simulate Robotics Applications in AWS Cloud9](https://aws.amazon.com/ko/blogs/robotics/robotics-development-in-aws-cloud9/): EC2에 ROS를 설치하고 Cloud9으로 활용하는 방법을 보여줍니다. 
 
 ## Reference
 
@@ -75,6 +80,8 @@ Rqt is an extensible dashboard framework that implements the various GUI tools a
 [AWS Robotics - Github](https://github.com/aws-robotics)
 
 [AWS RoboMaker 기능](https://aws.amazon.com/ko/robomaker/features/)
+
+[Build and Simulate Robotics Applications in AWS Cloud9](https://aws.amazon.com/ko/blogs/robotics/robotics-development-in-aws-cloud9/): EC2에 ROS를 설치하고 Cloud9으로 활용하는 방법을 보여줍니다. 
 
 [Building autonomous robots for everyday tasks with AWS RoboMaker](https://www.youtube.com/watch?v=2UWNIyBaDxg)
 
