@@ -1,6 +1,6 @@
 # Robotics Simulations
 
-[Workshop - Using AWS to Run Robotics Simulations](https://catalog.us-east-1.prod.workshops.aws/workshops/5b369b7a-2da1-498b-97a9-9af95e3c6294/en-US)에 따라서, 코드 다운로드 및 Docker Build를 아래와 같이 수행합니다. 
+[Workshop - Using AWS to Run Robotics Simulations](https://catalog.us-east-1.prod.workshops.aws/workshops/5b369b7a-2da1-498b-97a9-9af95e3c6294/en-US)을 참조하여 코드 다운로드 및 Docker Build를 아래와 같이 수행합니다. 
 
 ```java
 git clone -b noetic-husky-mqtt-dev https://github.com/aws-samples/multi-robot-fleet-sample-application.git
