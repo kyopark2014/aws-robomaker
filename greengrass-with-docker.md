@@ -301,6 +301,50 @@ Outputs:
     Description: S3 bucket to upload assets to. 
 ```    
 
+
+### recipe.yaml
+
+[recipe.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/greengrass/com.example.ros2.demo/1.0.0/recipes/recipe.yaml)은 아래와 같습니다. 
+
+```java
+---
+RecipeFormatVersion: '2020-01-25'
+ComponentName: com.example.ros2.demo
+ComponentVersion: '1.0.0'
+ComponentDescription: 'A basic component that runs a simple pub/sub ROS2 application'
+ComponentPublisher: Amazon
+ComponentDependencies:
+  aws.greengrass.DockerApplicationManager:
+    VersionRequirement: ~2.0.0
+  aws.greengrass.TokenExchangeService:
+    VersionRequirement: ~2.0.0
+ComponentConfiguration:
+  DefaultConfiguration:
+    accessControl:
+      aws.greengrass.ipc.mqttproxy:
+        com.example.PubSubPublisher:pubsub:1:
+          policyDescription: "Allows access to publish and subscribe to MQTT topics."
+          operations:
+          - "aws.greengrass#PublishToIoTCore"
+          - "aws.greengrass#SubscribeToIoTCore"
+          resources:
+          - "chatter"
+          - "cloud_chatter"
+Manifests:
+  - Platform:
+      os: all
+    Lifecycle:
+        Install: |
+           docker tag <YOUR_PRIVATE_ECR_IMAGE_ID_ROS_GREENGRASS_DEMO> ros-foxy-greengrass-demo:latest
+        Startup: |
+           docker-compose -f {artifacts:path}/docker-compose.yaml up -d
+        Shutdown: |
+           docker-compose -f {artifacts:path}/docker-compose.yaml down
+    Artifacts:
+      - URI: "docker:<YOUR_PRIVATE_ECR_IMAGE_ID_ROS_GREENGRASS_DEMO>"
+      - URI: "s3://<YOUR_BUCKET_NAME>/com.example.ros2.demo/1.0.0/artifacts/docker-compose.yaml"
+```
+
 ## Reference
 
 [Blog - Deploy and Manage ROS Robots with AWS IoT Greengrass 2.0 and Docker](https://aws.amazon.com/ko/blogs/robotics/deploy-and-manage-ros-robots-with-aws-iot-greengrass-2-0-and-docker/)
