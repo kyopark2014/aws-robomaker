@@ -51,10 +51,13 @@ Rqt is an extensible dashboard framework that implements the various GUI tools a
 [Robotics Simulations](https://github.com/kyopark2014/aws-robomaker/blob/main/robomaker-simulation.md)에 대한 코드 분석을 합니다. 
 
 
+### Cloud Connected Robots
+
+[Cloud Connected Robots](https://github.com/kyopark2014/aws-robomaker/edit/main/cloud-connected-robots.md)에 대한 코드를 분석합니다. 
+
 
 ## Workshop 
 
-[Building Cloud Connected Robots](https://catalog.us-east-1.prod.workshops.aws/workshops/fa208b8e-83d6-4cc1-8356-bfa5b6184fae/en-US)
 
 
 [NVIDIA Isaac Replicator and Isaac Sim on AWS RoboMaker Batch](https://catalog.us-east-1.prod.workshops.aws/workshops/bf038477-a314-403e-9272-508642bc0fcb/en-US)
