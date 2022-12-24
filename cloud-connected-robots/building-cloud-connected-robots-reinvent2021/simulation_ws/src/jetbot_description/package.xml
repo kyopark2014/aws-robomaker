@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package format="3">
+  <name>jetbot_description</name>
+  <version>1.0.0</version>
+  <description>
+    URDF ROS package for the AWS JetBot
+  </description>
+  <author email="ros-contributions@amazon.com">AWS RoboMaker</author>
+  <maintainer email="ros-contributions@amazon.com">AWS RoboMaker</maintainer>
+  <license>Apache 2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+    <gazebo_ros gazebo_media_path="${prefix}" gazebo_model_path="${prefix}/models" plugin_path="${prefix}/lib" />
+  </export>
+</package>

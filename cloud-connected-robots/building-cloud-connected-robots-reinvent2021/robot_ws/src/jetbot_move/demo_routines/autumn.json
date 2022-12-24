@@ -1,0 +1,43 @@
+{
+    "name": "AutumnDanceRoutine",
+    "songName": "Violin Concerto in F major, RV 293 'Autumn'",
+    "artist": "Antonio Vivaldi",
+    "audioURL": "https://musopen-files.s3-us-west-2.amazonaws.com/recordings/7c8b33fc-3fa1-4186-baf7-b6fc85a6cdf6.mp3",
+    "dancers": {
+        "lead": {
+            "startPosition": "0 0 0 0 0 0",
+            "routine": {
+                "1": "left",
+                "2": "right",
+                "3": "left",
+                "4": "right",
+                "5": "left",
+                "6": "right",
+                "7": "left",
+                "8": "right",
+                "9": "left",
+                "10": "right",
+                "11": "left",
+                "12": "forward",
+                "13": "backward",
+                "14": "forward",
+                "15": "backward",
+                "16": "forward",
+                "17": "backward",
+                "18": "forward",
+                "19": "backward",
+                "20": "forward",
+                "21": "backward",
+                "22": "forward",
+                "23": "backward",
+                "24": "forward",
+                "36": "right",
+                "46": "left",
+                "56": "forward",
+                "66": "right",
+                "76": "left",
+                "86": "end"
+            }
+        }
+    }
+}

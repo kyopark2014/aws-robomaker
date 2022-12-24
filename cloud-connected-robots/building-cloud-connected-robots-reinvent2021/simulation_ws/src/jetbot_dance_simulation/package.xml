@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>jetbot_dance_simulation</name>
+  <version>0.14.0</version>
+  <description>
+     Gazebo launch files for jetbot
+  </description>
+  
+  <maintainer email="jeremygw@amazon.com">Jeremy Wallace</maintainer>
+  <license>Apache License 2.0</license>
+  <author>Jeremy Wallace</author>
+  <author email="jeremygw@amazon.com">Jeremy Wallace</author>
+
+  <exec_depend>example_interfaces</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>navigation2</exec_depend>
+  <exec_depend>vision_opencv</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

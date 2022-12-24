@@ -1,0 +1,60 @@
+---
+RecipeFormatVersion: '2020-01-25'
+ComponentName: com.example.ros2.jetbot.dance
+ComponentVersion: '1.0.0'
+ComponentDescription: 'The ROS2 JetBot Dance Application'
+ComponentPublisher: Amazon
+ComponentDependencies:
+  aws.greengrass.DockerApplicationManager:
+    VersionRequirement: ">=2.0.0 <2.1.0"
+  aws.greengrass.TokenExchangeService:
+    VersionRequirement: ">=2.0.0 <2.1.0"
+ComponentConfiguration:
+  DefaultConfiguration:
+    auto_start: True
+    loaded_routine: 'autumn.json'
+    accessControl:
+      aws.greengrass.ipc.mqttproxy:
+        com.example.PubSubPublisher:pubsub:1:
+          policyDescription: "Allows access to publish and subscribe to MQTT topics."
+          operations:
+          - "aws.greengrass#PublishToIoTCore"
+          - "aws.greengrass#SubscribeToIoTCore"
+          resources:
+          - "chatter"
+          - "/jetbot/dance/demo"
+          - "/jetbot/dance/start"
+Manifests:
+  - Platform:
+      os: all
+    Lifecycle:
+        Bootstrap:
+          RequiresPrivilege: True
+          Script: |
+            echo "Bootstrapping the dance application! as root This runs only once during the deployment."
+            mkdir -p /home/ggc_user/routines/
+            cp {artifacts:path}/*.json /home/ggc_user/routines/
+            chown -R ggc_user:ggc_group /home/ggc_user/routines/
+            cat << EOF > {artifacts:path}/.env
+            LOADED_ROUTINE={configuration:/loaded_routine}
+            AUTO_START={configuration:/auto_start}
+            SVCUID=$SVCUID
+            AWS_GG_NUCLEUS_DOMAIN_SOCKET_FILEPATH_FOR_COMPONENT=$AWS_GG_NUCLEUS_DOMAIN_SOCKET_FILEPATH_FOR_COMPONENT
+            EOF
+            chown ggc_user:ggc_group {artifacts:path}/.env
+        Install:
+          Script: |
+            echo "Installing the dance application! This will run everytime the Greengrass core software is started."
+        Run:
+          SetEnv:
+            - HOME_ROUTINES: "/home/ubuntu/routines"
+          Script: |
+            echo "Running the dance application! This is the main application execution script."
+            docker-compose -f {artifacts:path}/docker-compose.yaml up
+        Shutdown: |
+            echo "Shutting down the dance application! This will run each time the component is stopped."
+    Artifacts:
+      - URI: "docker:[YOUR_REPOSITORY_URI]:latest"
+      - URI: "s3://[YOUR_S3_BUCKET_NAME]/artifacts/docker-compose.yaml"
+      - URI: "s3://[YOUR_S3_BUCKET_NAME]/artifacts/routines/autumn.json"
+      - URI: "s3://[YOUR_S3_BUCKET_NAME]/artifacts/routines/[YOUR_DANCE_ROUTINE_FILE]"

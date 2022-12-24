@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="DJBooth">
+    <link name="link">
+      <inertial>
+        <mass>50</mass>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>file://models/DJBooth/meshes/DJBooth.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+	    <geometry>
+          <mesh>
+            <uri>file://models/DJBooth/meshes/DJBooth.dae</uri>
+          </mesh>
+        </geometry>
+        <meta>
+          <layer>3</layer>
+        </meta>
+      </visual>
+    </link>
+    <static>1</static>
+  </model>
+</sdf>

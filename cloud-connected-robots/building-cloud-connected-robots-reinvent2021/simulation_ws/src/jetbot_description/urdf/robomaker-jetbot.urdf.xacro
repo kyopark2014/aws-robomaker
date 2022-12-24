@@ -1,0 +1,162 @@
+<?xml version="1.0" ?>
+<robot name="robomaker-jetbot" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find jetbot_description)/urdf/robomaker-jetbot.gazebo.xacro"/>
+  <xacro:arg name="laser_visualize"  default="false"/>
+  <xacro:arg name="camera_visualize" default="false"/>
+  
+  <joint name="right_wheel_hinge" type="continuous">
+    <parent link="chassis"/>
+    <child link="right_wheel"/>
+    <origin rpy="0       0      -1.57079" xyz="0.02  -0.048  0.032"/>
+    <axis xyz="-1  0  0"/>
+  </joint>
+  <joint name="left_wheel_hinge" type="continuous">
+    <parent link="chassis"/>
+    <child link="left_wheel"/>
+    <origin rpy="0      0      1.57079" xyz="0.02  0.048 0.032"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+
+  <link name="chassis">
+    <inertial>
+      <mass value="1.022"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="2.21e-03" ixy="-1.22e-05" ixz="3.49e-05"
+               iyy="2.11e-03" iyz="-5.01e-06"
+               izz="2.00e-03" />
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0   0   3.14" xyz="0   0   0.05"/>
+      <geometry>
+        <mesh filename="package://jetbot_description/models/robomaker-jetbot/meshes/waveshare-jetbot-base-link-convex-hull.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0   0   3.14" xyz="0   0   0.05"/>
+      <geometry>
+        <mesh filename="package://jetbot_description/models/robomaker-jetbot/meshes/waveshare-jetbot-base_link.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="right_wheel">
+    <inertial>
+      <mass value="2.85e-02" />
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="1.12e-05" ixy="-4.24e-11" ixz="-5.94e-09"
+               iyy="1.12e-05" iyz="-1.44e-11"
+               izz="2.07e-05" />
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://jetbot_description/models/robomaker-jetbot/meshes/waveshare-jetbot-wheel_link.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://jetbot_description/models/robomaker-jetbot/meshes/waveshare-jetbot-wheel_link.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="left_wheel">
+    <inertial>
+      <mass value="2.85e-02" />
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="1.12e-05" ixy="-4.24e-11" ixz="-5.94e-09"
+               iyy="1.12e-05" iyz="-1.44e-11"
+               izz="2.07e-05" />
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://jetbot_description/models/robomaker-jetbot/meshes/waveshare-jetbot-wheel_link.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://jetbot_description/models/robomaker-jetbot/meshes/waveshare-jetbot-wheel_link.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <parent link="chassis"/>
+    <child link="camera_link"/>
+    <origin rpy="0   0.25 0" xyz="0.075  0     0.0857"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <link name="camera_link">
+    <inertial>
+      <mass value="0.0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <visual name="visual">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="chassis"/>
+    <child link="lidar_link"/>
+    <origin rpy="0   0   3.14" xyz="0.0103 -0.0058  0.127"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+
+  <link name="lidar_link">
+    <inertial>
+      <mass value="0.0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://jetbot_description/models/robomaker-jetbot/meshes/lidar-base.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://jetbot_description/models/robomaker-jetbot/meshes/lidar-base.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+
+<!--
+  <joint name="lidar_top_joint" type="fixed">
+    <parent link="lidar_link"/>
+    <child link="lidar_top_link"/>
+    <origin rpy="0 0 0" xyz="0   0   0.03"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+
+  <link name="lidar_top_link">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision name="collision">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://jetbot_description/models/robomaker-jetbot/meshes/lidar-top.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://jetbot_description/models/robomaker-jetbot/meshes/lidar-top.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+-->
+</robot>
