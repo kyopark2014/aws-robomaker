@@ -121,6 +121,40 @@ source "/opt/ros_demos/setup.bash"
 exec "$@"
 ```
 
+### docker-compose.yaml
+
+[docker-compose.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/docker-compose.yaml)은 아래와 같습니다. 
+
+```java
+version: "3"
+services: 
+
+  greengrass_demo_image:
+    build: 
+        context: ./
+    image: ros-foxy-greengrass-demo:latest
+    
+  talker:
+    image: ros-foxy-greengrass-demo:latest
+    command: ros2 run demo_nodes_cpp talker
+      
+  listener:
+    image: ros-foxy-greengrass-demo:latest
+    command: ros2 run demo_nodes_cpp listener
+
+  greengrass_bridge:
+    image: ros-foxy-greengrass-demo:latest
+    command: ros2 launch greengrass_bridge greengrass_bridge.launch.py ros_topics:="['chatter']" iot_topics:="['cloud_chatter']"
+    environment:
+      - AWS_REGION
+      - SVCUID
+      - AWS_GG_NUCLEUS_DOMAIN_SOCKET_FILEPATH_FOR_COMPONENT
+      - AWS_CONTAINER_AUTHORIZATION_TOKEN
+      - AWS_CONTAINER_CREDENTIALS_FULL_URI
+    volumes: 
+      - "/greengrass/v2/ipc.socket:/greengrass/v2/ipc.socket"
+```      
+
 ### greengrass_bootstrap.template.yaml
 
 [greengrass_bootstrap.template.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/greengrass/greengrass_bootstrap.template.yaml)에서는 아래와 같이 ECR, IAM Role을 설정합니다. 
