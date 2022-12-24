@@ -89,7 +89,7 @@ exec "$@"
 ```
 
 
-## Readme.txt
+## readme.txt
 
 ```java
 # How to build and run docker image
