@@ -10,6 +10,29 @@ cd ~/greengrass-v2-docker-ros-demo
 aws cloudformation create-stack --stack-name GG-Provisioning --template-body file://greengrass/greengrass_bootstrap.template.yaml --capabilities CAPABILITY_NAMED_IAM
 ```
 
+Greengrass에 thing으로 등록하고 docker를 쓸수 있도록 group을 등록합니다. 
+
+```java
+export AWS_ACCESS_KEY_ID=<INSERT_YOUR_AWS_ACCESS_KEY_ID_HERE>
+export AWS_SECRET_ACCESS_KEY=<INSERT_YOUR_AWS_SECRET_KEY>
+
+curl -s https://d2s8p88vqu9w66.cloudfront.net/releases/greengrass-nucleus-latest.zip > greengrass-nucleus-latest.zip && unzip greengrass-nucleus-latest.zip -d GreengrassCore
+
+sudo -E java -Droot="/greengrass/v2" -Dlog.store=FILE -jar ./GreengrassCore/lib/Greengrass.jar \
+           --thing-name ROS2_Sample_Robot \
+           --thing-group-name ROS2_Sample_Robots \
+           --component-default-user ggc_user:ggc_group \
+           --provision true \
+           --setup-system-service true \
+           --deploy-dev-tools true
+           
+ sudo usermod -aG docker ggc_user
+ ```
+
+[recipe.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/greengrass/com.example.ros2.demo/1.0.0/recipes/recipe.yaml), [docker-compose.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/docker-compose.yaml)을 이용해 component를 생성합니다. 
+
+
+
 ### greengrass_bootstrap.template.yaml
 
 [greengrass_bootstrap.template.yaml](https://github.com/aws-samples/greengrass-v2-docker-ros-demo/blob/main/greengrass/greengrass_bootstrap.template.yaml)
