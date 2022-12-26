@@ -12,17 +12,17 @@
 
 #### ROS1
 
-ROS1은 2007년에 Willow Garage에 의해 만들어져서 오픈소스 로보틱스 커뮤니티에서 활용되고 있습니다. 
+- ROS1은 2007년에 Willow Garage에 의해 만들어져서 오픈소스 로보틱스 커뮤니티에서 활용되고 있습니다. 
 
-ROS1의 마지막 버전은 ROS Noetic (release date: 2020)이고 2025년에 ROL(End of Lift)될 예정입니다. 
+- ROS1의 마지막 버전은 ROS Noetic (release date: 2020)이고 2025년에 ROL(End of Lift)될 예정입니다. 
 
-ROS1과 ROS2의 중간버전으로 ROS1 Melodic은 Ubuntu 18을 지원하고 2023년에 EOL 됩니다. ROS Melodic은 Gazebo 9 시뮬레이션 엔진 및 Ubuntu 18.04(Bionic) 운영 체제와 호환됩니다
+- ROS1과 ROS2의 중간버전으로 ROS1 Melodic은 Ubuntu 18을 지원하고 2023년에 EOL 됩니다. ROS Melodic은 Gazebo 9 시뮬레이션 엔진 및 Ubuntu 18.04(Bionic) 운영 체제와 호환됩니다
 
 #### ROS2
 
-ROS1의 real-time, safety, certification, security를 향상시킨 버전입니다. 
+- ROS1의 real-time, safety, certification, security를 향상시킨 버전입니다. 
 
-Foxy(release date: 2020)는 ROS2의 LTS(Long Term Support) 버전입니다. 
+- Foxy(release date: 2020)는 ROS2의 LTS(Long Term Support) 버전입니다. 
 
 ## Reference
 
