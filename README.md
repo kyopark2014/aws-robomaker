@@ -23,7 +23,7 @@ Supporting Region (2022.12): Europe (Ireland), Asia Pacific (Singapore), Europe 
 
 [ros:foxy-ros-core-focal](https://hub.docker.com/layers/library/ros/foxy-ros-core-focal/images/sha256-74092d169aa613a7ecd87a3c9d2870fcc8f396a86f139c69d48b117b7594ca87?context=explore): ARM64
 
-
+[ros:noetic-ros-core-focal](https://hub.docker.com/layers/library/ros/noetic-ros-core-focal/images/sha256-f14979b3e99f29bf1433552bfd1a3b683b87660395033f7902fcee9aa638f885?context=explore): ARM, ARM64
 
 ## 중요 References
 
