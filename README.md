@@ -67,9 +67,9 @@ Cloud9을 이용할 경우에, [Cloud9에서 EBS 크기 변경](https://github.c
 
 [Simulation and Testing Robots using AWS RoboMaker](https://summit.robomakerworkshops.com/ws/multi_robot_fleet_simulations): RoboMaker 사용법에 대한 간단한 설명입니다.
 
-[Run a Simulation in AWS RoboMaker](https://www.youtube.com/watch?v=CocGUfhp-I8) 간단한 설명후 [Hands on](https://github.com/aws-robotics/aws-robomaker-sample-application-cloudwatch)을 수행합니다. 
-
 [AWS RoboMaker Robotics Curriculum](https://github.com/aws-robotics/aws-robomaker-robotics-curriculum)
+
+[Run a Simulation in AWS RoboMaker](https://www.youtube.com/watch?v=CocGUfhp-I8) 간단한 설명후 Hands on으로 [github](https://github.com/aws-robotics/aws-robomaker-sample-application-cloudwatch)의 내용을 deploy하고 gazebo로 시뮬레이션을 수행합니다. 
 
 [Build and Simulate Robotics Applications in AWS Cloud9](https://aws.amazon.com/ko/blogs/robotics/robotics-development-in-aws-cloud9/): EC2에 ROS를 설치하고 Cloud9으로 활용하는 방법을 보여줍니다. 
 
