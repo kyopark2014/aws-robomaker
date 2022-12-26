@@ -12,7 +12,7 @@ export class CdkRobomakerStack extends cdk.Stack {
     super(scope, id, props);
 
     const asset = new DockerImageAsset(this, 'BuildImage', {
-      directory: path.join(__dirname, '../../cloud-connected-robots/building-cloud-connected-robots-reinvent2021/'),
+      directory: path.join(__dirname, '../../HelloWorld/HelloWorldSampleAppROS2FoxyGazebo11SimApp/'),
     })
 
     const imageUri = asset.imageUri
