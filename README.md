@@ -55,15 +55,15 @@ Cloud9을 이용할 경우에, [Cloud9에서 EBS 크기 변경](https://github.c
 
 ## Reference
 
-[What Is AWS RoboMaker? - Developer Guide](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-welcome.html)
-
-[AWS Robotics Blog](https://aws.amazon.com/ko/blogs/robotics/)
-
 [AWS RoboMaker](https://aws.amazon.com/ko/robomaker/)
+
+[AWS RoboMaker 기능](https://aws.amazon.com/ko/robomaker/features/)
 
 [AWS Robotics - Github](https://github.com/aws-robotics)
 
-[AWS RoboMaker 기능](https://aws.amazon.com/ko/robomaker/features/)
+[What Is AWS RoboMaker? - Developer Guide](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-welcome.html)
+
+[AWS Robotics Blog](https://aws.amazon.com/ko/blogs/robotics/)
 
 [Simulation and Testing Robots using AWS RoboMaker](https://summit.robomakerworkshops.com/ws/multi_robot_fleet_simulations): RoboMaker 사용법에 대한 간단한 설명입니다.
 
