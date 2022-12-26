@@ -10,6 +10,9 @@
 
 - ROS is a flexible middleware software framework for building robot applications that was designed to encourage collaborative robot application development. It contains a collection of tools, libraries and conventions that make it easier for robotics developers to build sophisticated applications.
 
+- XML (ROS1), Python (ROS2)
+- Robomaker 시뮬레이션은 application을 실행할때 ROS launch를 이용합니다. 
+
 #### ROS1
 
 - ROS1은 2007년에 Willow Garage에 의해 만들어져서 오픈소스 로보틱스 커뮤니티에서 활용되고 있습니다. 
