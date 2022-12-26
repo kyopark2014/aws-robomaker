@@ -11,7 +11,36 @@ tar -xf workshop-assets.tar.gz
 
 ## Docker Container 이미지 빌드하여 RoboMaker에서 실행한 결과 
 
-Launch config를 아래와 같이 설정하였습니다.
+CDK를 이용해 아래처럼 Docker Container 이미지를 빌드하여 ECR에 등록합니다.
+
+```java
+import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
+
+import * as path from "path";
+import { DockerImageAsset } from 'aws-cdk-lib/aws-ecr-assets';
+import * as greengrassv2 from 'aws-cdk-lib/aws-greengrassv2';
+import * as s3 from 'aws-cdk-lib/aws-s3';
+import * as s3Deploy from "aws-cdk-lib/aws-s3-deployment"
+
+export class CdkRobomakerStack extends cdk.Stack {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id, props);
+
+    const asset = new DockerImageAsset(this, 'BuildImage', {
+      directory: path.join(__dirname, '../../cloud-connected-robots/building-cloud-connected-robots-reinvent2021/'),
+    })
+
+    const imageUri = asset.imageUri
+    new cdk.CfnOutput(this, 'ImageUri', {
+      value: imageUri,
+      description: 'Image Uri',
+    }); 
+  }
+}
+```
+
+이후 RoboMaker의 [Simulation jobs](https://us-east-1.console.aws.amazon.com/robomaker/home?region=us-east-1#simulationJobs)에서 [Create simulation job]을 생성할 경우에, Launch config를 아래와 같이 설정하였습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/209526562-1422f641-9865-432a-af0e-5927f8285cf7.png)
 
