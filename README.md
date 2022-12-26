@@ -1,6 +1,5 @@
 # AWS RoboMaker
 
-
 AWS의 로보메이커(RoboMaker)는 클라우드 기반의 로봇 시뮬레이션 서비스입니다. 로봇 개발자들이 로봇을 개발하고 시험하고 Cloud를 이용해 배포할수 있도록 해줍니다. 또한 다수의 로봇을 실행하고 자동화 할 수 있습니다. 
 
 아래는 AWS의 RoboMaker의 Architecture를 보여줍니다. 
@@ -17,7 +16,10 @@ Supporting Region (2022.12): Europe (Ireland), Asia Pacific (Singapore), Europe 
 
 [Development Tools](https://github.com/kyopark2014/aws-robomaker/blob/main/development-tools.md)에서는 Gazebo, Rviz, Rqt등 개발툴에 대해 정리합니다.
 
-### Base Image
+### Docker Image
+
+[2022.10의 업그레이드](https://docs.aws.amazon.com/robomaker/latest/dg/migrating-ros.html)로 RoboMaker를 이용하기 위해 Application을 Container로 빌드하여, Docker Workflow에서 사용하여야 합니다. 
+
 
 [ROS Image - dockerhub](https://hub.docker.com/_/ros/)
 
