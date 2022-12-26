@@ -21,6 +21,25 @@ Robust physics engine, high-quality graphics, and programmatic and graphical int
 
 - Colcon is a command line tool built by the OSRF(Open Source Robotics Foundation). It is a command line toool to improve the workflow of building, testing and using multiple software packages. It automates the building and bundling of ROS and ROS2 applications.
 
+
+## 용어 
+
+### Automated Guided Vehicles
+- Follows pre-determined routes using physical guidance mechanisms
+- Requires hardware guide changes to adapt to changing environments
+- Stops when facing obstacles until removed
+- Fixed depots for pickup and drop-off
+
+### AMR
+
+AMR(Autonomous Mobile Robots)의 특징은 아래와 같습니다. 
+
+- Self determined routes to destination
+- Ability to easily adapt to changing environments
+- Can change path to navigates around obstacles 
+- Dynamic pickup and drop-off locations
+
+
 ## Reference 
 
 [Simulation and Testing Robots using AWS RoboMaker](https://summit.robomakerworkshops.com/ws/multi_robot_fleet_simulations)
