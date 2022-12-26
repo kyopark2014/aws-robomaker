@@ -1,8 +1,10 @@
 # Cloud Connected Robots
 
-[Workshop - Building Cloud Connected Robots](https://catalog.us-east-1.prod.workshops.aws/workshops/fa208b8e-83d6-4cc1-8356-bfa5b6184fae/en-US)에 따라 Robot을 Robot을 RoboMaker에 연결하는것을 확인합니다. 
+## Workshop
 
-코드 다운로드를 합니다.
+[Workshop - Building Cloud Connected Robots](https://catalog.us-east-1.prod.workshops.aws/workshops/fa208b8e-83d6-4cc1-8356-bfa5b6184fae/en-US)의 코드를 분석합니다. 
+
+먼저 아래와 같이 코드를 다운로드 합니다.
 
 ```java
 wget https://ee-assets-prod-us-east-1.s3.us-east-1.amazonaws.com/modules/4301048177d549d3a52333b51ac7e8f7/v2/workshop-assets.tar.gz
