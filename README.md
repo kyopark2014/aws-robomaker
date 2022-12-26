@@ -18,7 +18,7 @@ Supporting Region (2022.12): Europe (Ireland), Asia Pacific (Singapore), Europe 
 
 ### Docker Image
 
-[2022.10의 업그레이드](https://docs.aws.amazon.com/robomaker/latest/dg/migrating-ros.html)로 RoboMaker를 이용하기 위해 Application을 Container로 빌드하여, Docker Workflow에서 사용하여야 합니다. 
+[2021.10의 업그레이드](https://docs.aws.amazon.com/robomaker/latest/dg/migrating-ros.html)로 RoboMaker를 이용하기 위해 Application을 Container로 빌드하여, Docker Workflow에서 사용하여야 합니다. 
 
 
 [ROS Image - dockerhub](https://hub.docker.com/_/ros/)
