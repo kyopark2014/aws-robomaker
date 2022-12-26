@@ -11,6 +11,7 @@ Robust physics engine, high-quality graphics, and programmatic and graphical int
 
 - Rvis is a 3D Visulizer for the ROS framework. It provides information on the robot state and world around it (virtual or real).
 
+- Rviz is a 3D visualization tool for ROS. It provides information on the robot state and world around it (virtual or real). You can use this tool to see sensor outputs (like camera feeds and the robot's current location on map), analyze your URDF models, set custom robot configurations and more. To visualize your robot sensors and map, we first need to point to our robot components.
 
 ### Rqt
 
@@ -19,3 +20,7 @@ Robust physics engine, high-quality graphics, and programmatic and graphical int
 ### Colcon
 
 - Colcon is a command line tool built by the OSRF(Open Source Robotics Foundation). It is a command line toool to improve the workflow of building, testing and using multiple software packages. It automates the building and bundling of ROS and ROS2 applications.
+
+## Reference 
+
+[Simulation and Testing Robots using AWS RoboMaker](https://summit.robomakerworkshops.com/ws/multi_robot_fleet_simulations)
