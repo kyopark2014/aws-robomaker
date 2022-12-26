@@ -25,6 +25,8 @@ Supporting Region (2022.12): Europe (Ireland), Asia Pacific (Singapore), Europe 
 
 [ros:noetic-ros-core-focal](https://hub.docker.com/layers/library/ros/noetic-ros-core-focal/images/sha256-f14979b3e99f29bf1433552bfd1a3b683b87660395033f7902fcee9aa638f885?context=explore): ARM, ARM64
 
+[ros:melodic-ros-core-bionic](https://hub.docker.com/layers/library/ros/melodic-ros-core-bionic/images/sha256-245faa8bc7352ccd1fe026976d8207b5afb0f0cbfc84731aa590e6eebf0c6aaf?context=explore): ARM, ARM64
+
 ## 중요 References
 
 Cloud9을 이용할 경우에, [Cloud9에서 EBS 크기 변경](https://github.com/kyopark2014/technical-summary/blob/main/resize.md)에 따라 cloud9의 볼륨을 조정합니다. 
