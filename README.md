@@ -28,7 +28,7 @@ Cloud9을 이용할 경우에, [Cloud9에서 EBS 크기 변경](https://github.c
 
 ### ROS Robot in Greengrass
 
-[Grrengrass with Dockor](https://github.com/kyopark2014/aws-robomaker/blob/main/greengrass-with-docker.md)에서는 Greengrass2.0에 Docker로 된 ROS Robot을 올리는것에 대한 코드를 분석합니다. 
+[Greengrass with Dockor](https://github.com/kyopark2014/aws-robomaker/blob/main/greengrass-with-docker.md)에서는 Greengrass2.0에 Docker로 된 ROS Robot을 올리는것에 대한 코드를 분석합니다. 
 
 
 ### Robotics Simulations
