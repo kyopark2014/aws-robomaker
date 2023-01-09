@@ -54,7 +54,7 @@ Cloud9을 이용할 경우에, [Cloud9에서 EBS 크기 변경](https://github.c
 
 ## Workshop 
 
-
+[AWS RoboMaker Workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/33153d0f-ac80-4c28-91c6-ca55dde7681d/ko-KR)
 
 [NVIDIA Isaac Replicator and Isaac Sim on AWS RoboMaker Batch](https://catalog.us-east-1.prod.workshops.aws/workshops/bf038477-a314-403e-9272-508642bc0fcb/en-US)
 
