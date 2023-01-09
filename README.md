@@ -92,3 +92,5 @@ Cloud9을 이용할 경우에, [Cloud9에서 EBS 크기 변경](https://github.c
 [Build a Robot Application with AWS RoboMaker - AWS Online Tech Talks](https://www.youtube.com/watch?v=b7wzhSo4F_M): 전반적인 좋은 설명을 들을 수 있고, 이전 UI이지만, Hands on도 참고할만합니다. 
 
 [Deploying Robotic Applications Using Machine Learning with Nvidia JetBot and AWS RoboMaker](https://www.youtube.com/watch?v=mrIjtBdDQ5A)
+
+[What Is NICE DCV?](https://docs.aws.amazon.com/dcv/latest/adminguide/what-is-dcv.html)
