@@ -95,4 +95,3 @@ Cloud9을 이용할 경우에, [Cloud9에서 EBS 크기 변경](https://github.c
 
 [What Is NICE DCV?](https://docs.aws.amazon.com/dcv/latest/adminguide/what-is-dcv.html)
 
-[Build and Simulate Robotics Applications in AWS Cloud9](https://aws.amazon.com/ko/blogs/robotics/robotics-development-in-aws-cloud9/)
