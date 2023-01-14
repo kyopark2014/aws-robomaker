@@ -21,3 +21,7 @@ ros1-automation-cfn-EC2InstanceRole-1WDBF1W77VXN5
 ```
 
 AmazonEC2FullAccess, AdministratorAccess, AmazonSSMManagedInstanceCore
+
+## Reference
+
+[Robot fleet simulation using concurrent gazebo instances](https://github.com/aws-samples/multi-robot-fleet-sample-application)
