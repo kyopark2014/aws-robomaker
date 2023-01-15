@@ -27,8 +27,8 @@ sudo reboot
 wget https://d1uj6qtbmh3dt5.cloudfront.net/NICE-GPG-KEY
 gpg --import NICE-GPG-KEY
 wget https://d1uj6qtbmh3dt5.cloudfront.net/2022.2/Servers/nice-dcv-2022.2-14175-ubuntu1804-x86_64.tgz
-tar -xvzf nice-dcv-2022.2-14175-ubuntu1804-x86_64.tgz && cd nice-dcv-2022.2-14175-ubuntu1804-x86_64
-sudo apt install ./nice-dcv-server_2022.2.14175-1_amd64.ubuntu1804.deb
+tar -xvzf nice-dcv-2022.2-14175-ubuntu1804-x86_64.tgz && cd nice-dcv-2022.2-14175-ubuntu1804-x86_64 
+sudo apt install ./nice-dcv-server_2022.2.14175-1_amd64.ubuntu1804.deb -y
 sudo usermod -aG video dcv
 sudo apt install ./nice-xdcv_2022.2.487-1_amd64.ubuntu1804.deb
 sudo apt install ./nice-dcv-gl_2022.2.983-1_amd64.ubuntu1804.deb
