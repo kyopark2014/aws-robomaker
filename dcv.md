@@ -12,6 +12,10 @@ The NICE DCV server software is used to create a secure session. You install and
 - Ubuntu 18.x
 
 ```java
+sudo apt update
+```
+
+```java
 sudo apt install ubuntu-desktop lightdm -y
 sudo apt upgrade
 sudo reboot
