@@ -86,3 +86,5 @@ A detailed report about the tests is available in '/home/ubuntu/environment/dcvg
 ## Reference 
 
 [What Is NICE DCV?](https://docs.aws.amazon.com/dcv/latest/adminguide/what-is-dcv.html)
+
+[언택트 시대의 CAD/CAE 유저를 위한 AWS 클라우드 서비스 (4)](https://cadgraphics.co.kr/newsview.php?pages=lecture&sub=lecture02&catecode=8&num=69253)
