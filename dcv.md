@@ -31,7 +31,7 @@ tar -xvzf nice-dcv-2022.2-14175-ubuntu1804-x86_64.tgz && cd nice-dcv-2022.2-1417
 sudo apt install ./nice-dcv-server_2022.2.14175-1_amd64.ubuntu1804.deb -y
 sudo usermod -aG video dcv
 sudo apt install ./nice-xdcv_2022.2.487-1_amd64.ubuntu1804.deb
-sudo apt install ./nice-dcv-gl_2022.2.983-1_amd64.ubuntu1804.deb
+sudo apt install ./nice-dcv-gl_2022.2.983-1_amd64.ubuntu1804.deb -y
 sudo apt install ./nice-dcv-simple-external-authenticator_2022.2.198-1_amd64.ubuntu1804.deb
 sudo DISPLAY=:0 XAUTHORITY=$(ps aux | grep "X.*\-auth" | grep -v grep | sed -n 's/.*-auth \([^ ]\+\).*/\1/p') xhost | grep "SI:localuser:dcv$"
 ```
